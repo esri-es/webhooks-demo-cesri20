@@ -1,8 +1,11 @@
-# WebHooks Demo #CEsri20
+# Webhooks Demo #CEsri20
 
 We finally have [Webhooks](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm) also supported on hosted feature services! ^_^
 
-This is a short tutorial on how to reproduce the same demo we did at the Developer's Week during the Esri Spain User Conference in 2020.
+This is a short tutorial on how to reproduce the [same demo](https://studio.youtube.com/channel/UCtOKtU_kXqz5ZlJ_-OJc_dw/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D) we did at the Developer's Week during the Esri Spain User Conference in 2020.
+
+[![Demo Webhooks on Hosted Feature Services - ArcGIS Online](https://user-images.githubusercontent.com/826965/95022980-b35e2380-067a-11eb-9999-c69a3d13bc7c.gif)
+](https://youtu.be/P83UPqVIOAw)
 
 > **Requirements**:  you need to have installed: Git, NodeJS and ngrok in your computer
 
@@ -11,18 +14,18 @@ This is a short tutorial on how to reproduce the same demo we did at the Develop
 To reproduce this example:
 
 1. Run this script:
-	1.1 Clone this repo: `https://github.com/esri-es/webhooks-demo-cesri20.git`
-	1.2 Install dependencies: `npm i`
-	1.3 Run: `node index.js`
+	* Clone this repo: `https://github.com/esri-es/webhooks-demo-cesri20.git`
+	* Install dependencies: `npm i`
+	* Run: `node index.js`
 
 2. Run `grok http 127.0.0.1:3000` in a different terminar
 
 3. Setup your Webhook
-	2.1 Create a [new Hosted Feature Layer](https://developers.arcgis.com/layers/new)
-	2.2 Click "View in ArcGIS Online" > "Settings", and check "Keep track of created and updated features"
-	2.3 Get a token from: https://developers.arcgis.com/dashboard
-	2.4 Get your service URL, add "admin/" between "rest" and "services" and also add at the the "?token=<YOUR TOKEN>"
-	2.5 Click on "Web Hooks" (bottom right) > "Create" and add
+	* Create a [new Hosted Feature Layer](https://developers.arcgis.com/layers/new)
+	* Click "View in ArcGIS Online" > "Settings", and check "Keep track of created and updated features"
+	* Get a token from: https://developers.arcgis.com/dashboard
+	* Get your service URL, add "admin/" between "rest" and "services" and also add at the the "?token=<YOUR TOKEN>"
+	* Click on "Web Hooks" (bottom right) > "Create" and add
 		* Change types: *
 		* HookURL: <your ngrok url, something like https://ba3d5b9bf39c.ngrok.io>
 		* Click create
