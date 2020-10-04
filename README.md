@@ -34,3 +34,16 @@ Now you are ready to test it:
 * Load the feature layer
 * Do some edits
 * And wait until you start seeing messages in your console ^_^
+
+# Known limitations
+
+This script do not support secured services but contributions are always welcome. We would suggest to use [arcgis-rest-js](https://github.com/Esri/arcgis-rest-js) to make it easy.
+
+# Additional resources
+
+* [Webhooks documentation](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
+* [ArcGIS Online: Best Practices with Hosted Feature Services](https://www.youtube.com/watch?v=pp5GP2_xFeo&feature=youtu.be&t=4923) (video)
+
+# Questions, enhancements & bugs
+
+Use the [issues](https://github.com/esri-es/webhooks-demo-cesri20/issues) to ask/report anything you want.

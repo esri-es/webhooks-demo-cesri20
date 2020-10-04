@@ -18,16 +18,24 @@ app.post('/',function(req,res){
 
     var payload = JSON.parse(req.body.payload)
 
-    // WARNING: Will check just changes in one layer -> '0'
-    let jobUrl = `${payload[0].changesUrl}&f=json`;
+    payload.forEach(element => {
+        let jobUrl = `${element.changesUrl}&f=json`;
 
-    // Let's get find the job's statusUrl
-    getJSONResource(jobUrl).then(({resp, url}) => {
-        // Now let's query if it has finished
-        getJobIfCompleted(`${resp.statusUrl}?f=json`);
-    }).catch(reason => {
-        console.error(reason);
+        // Let's get find the job's statusUrl
+        getJSONResource(jobUrl).then(({resp, url}) => {
+            if(resp.error){
+                console.error('Error: ', JSON.stringify(resp.error, null, 2));
+            }
+            // Some changes like just changing attachments do not provide an statusUrl
+            if(resp.statusUrl){
+                // Now let's query if it has finished
+                getJobIfCompleted(`${resp.statusUrl}?f=json`);
+            }
+        }).catch(reason => {
+            console.error(reason);
+        });
     });
+
 
     res.send(req.body);
 });

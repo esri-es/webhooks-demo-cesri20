@@ -24,10 +24,17 @@ let getJSONResource = function(url){
 
 let getChangesFromJob = function(url){
     getJSONResource(url).then(({resp, url}) => {
-        resp.edits[0].features.adds.map(f => console.log(`Feature added: \n${JSON.stringify(f, null, 2)}`));
-        resp.edits[0].features.updates.map(f => console.log(`Feature updated: \n${JSON.stringify(f, null, 2)}`));
-        resp.edits[0].features.deleteIds.map(f => console.log(`Feature deleted: ${f}`));
-        // Same with attachments: resp.edits[0].attachments
+        resp.edits.forEach(elem => {
+
+            elem.features.adds.map(f => console.log(`Feature added: \n${JSON.stringify(f, null, 2)}`));
+            elem.features.updates.map(f => console.log(`Feature updated: \n${JSON.stringify(f, null, 2)}`));
+            elem.features.deleteIds.map(f => console.log(`Feature deleted: ${f}`));
+            // Same with attachments: resp.edits[0].attachments
+            elem.attachments.adds.map(f => console.log(`Attachments added: \n${JSON.stringify(f, null, 2)}`));
+            elem.attachments.updates.map(f => console.log(`Attachments updated: \n${JSON.stringify(f, null, 2)}`));
+            elem.attachments.deleteIds.map(f => console.log(`Attachments deleted: ${f}`));
+
+        });
     }).catch(reason => {
         console.error(reason);
     });
