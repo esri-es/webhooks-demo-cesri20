@@ -1,4 +1,4 @@
-# WebHooks Demo #CEsri20
+# Webhooks Demo #CEsri20
 
 We finally have [Webhooks](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm) also supported on hosted feature services! ^_^
 
