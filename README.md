@@ -24,7 +24,7 @@ To reproduce this example:
 	* Create a [new Hosted Feature Layer](https://developers.arcgis.com/layers/new)
 	* Click "View in ArcGIS Online" > "Settings", and check "Keep track of created and updated features"
 	* Get a token from: https://developers.arcgis.com/dashboard
-	* Get your service URL, add "admin/" between "rest" and "services" and also add at the the "?token=<YOUR TOKEN>"
+	* Get your service URL, add "admin/" between "rest" and "services" and also add at the the "?token=\<YOUR TOKEN\>"
 	* Click on "Web Hooks" (bottom right) > "Create" and add
 		* Change types: *
 		* HookURL: <your ngrok url, something like https://ba3d5b9bf39c.ngrok.io>
