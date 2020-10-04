@@ -1,6 +1,6 @@
 # Webhooks Demo #CEsri20
 
-We finally have [Webhooks](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm) also supported on hosted feature services! ^_^
+We finally have [Webhooks](https://developers.arcgis.com/rest/services-reference/web-hooks-create-feature-service-.htm) also supported on hosted feature services! ^_^
 
 This is a short tutorial on how to reproduce the [same demo](https://studio.youtube.com/channel/UCtOKtU_kXqz5ZlJ_-OJc_dw/videos/upload?d=ud&filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D) we did at the Developer's Week during the Esri Spain User Conference in 2020.
 
@@ -44,7 +44,7 @@ This script do not support secured services but contributions are always welcome
 
 # Additional resources
 
-* [Webhooks documentation](https://developers.arcgis.com/rest/users-groups-and-items/create-webhooks.htm)
+* [Webhooks documentation](https://developers.arcgis.com/rest/services-reference/web-hooks-create-feature-service-.htm)
 * [ArcGIS Online: Best Practices with Hosted Feature Services](https://www.youtube.com/watch?v=pp5GP2_xFeo&feature=youtu.be&t=4923) (video)
 
 # Questions, enhancements & bugs
